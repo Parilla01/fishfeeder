@@ -78,7 +78,7 @@ html {
         margin-bottom: 5%;
         margin-left: 31.3%;
     }
-    .phvalue {
+    .phmeter {
         justify-self: center;
         display: flex;
         align-items: center;
@@ -337,7 +337,7 @@ html {
         margin-bottom: 5%;
     }
 
-    .phvalue {
+    .phmeter {
         
         justify-self: center;
         display: flex;
