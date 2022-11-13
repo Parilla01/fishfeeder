@@ -82,7 +82,7 @@
         var phRef = firebase.database().ref('phvalue');
         phRef.on('value', function (snapshot) {
             phvalue = snapshot.val()
-            document.getElementById("root").innerHTML = (phvalue)
+            document.getElementById("root").innerHTML = phvalue
         });
     </script>
 </body>
