@@ -34,14 +34,14 @@ function toggleDiv() {
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAH0kF_y1kThBdrsgpycS-l1c1qYavaCMw",
-  authDomain: "automaticfishfeeder-f874d.firebaseapp.com",
-  databaseURL: "https://automaticfishfeeder-f874d-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "automaticfishfeeder-f874d",
-  storageBucket: "automaticfishfeeder-f874d.appspot.com",
-  messagingSenderId: "194009925433",
-  appId: "1:194009925433:web:71938d69a0a20d85efcae8",
-  measurementId: "G-B48R18G6XN"
+    apiKey: "AIzaSyB17Dg3NCxBLk-XVnZ1dUOJsss1-9hl-Ak",
+    authDomain: "fishfeeder-8e3e2.firebaseapp.com",
+    databaseURL: "https://fishfeeder-8e3e2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "fishfeeder-8e3e2",
+    storageBucket: "fishfeeder-8e3e2.appspot.com",
+    messagingSenderId: "657950017507",
+    appId: "1:657950017507:web:be4e0e8aeb84713a0ac2d6",
+    measurementId: "G-RFGCT9PLN8"
 };
 
 firebase.initializeApp(firebaseConfig);
