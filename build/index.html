@@ -64,7 +64,27 @@
     <script id="rendered-js" src="assets/js/script.js">
     </script>
     <script src="assets/js/mdtimepicker.js"></script>
-    <script src="assets/js/phmeter.js"></script>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAH0kF_y1kThBdrsgpycS-l1c1qYavaCMw",
+            authDomain: "automaticfishfeeder-f874d.firebaseapp.com",
+            databaseURL: "https://automaticfishfeeder-f874d-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "automaticfishfeeder-f874d",
+            storageBucket: "automaticfishfeeder-f874d.appspot.com",
+            messagingSenderId: "194009925433",
+            appId: "1:194009925433:web:71938d69a0a20d85efcae8",
+            measurementId: "G-B48R18G6XN"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var phRef = firebase.database().ref('phvalue');
+        phRef.on('value', function (snapshot) {
+            phvalue = snapshot.val()
+            document.getElementById("root").innerHTML = (phvalue)
+        });
+    </script>
 </body>
 
 </html>
