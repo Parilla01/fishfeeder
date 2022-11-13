@@ -15,5 +15,5 @@ firebase.initializeApp(firebaseConfig);
 var phmeterRef = firebase.database().ref('phvalue');
 phmeterRef.on('value', function (snapshot) {
     phvalue = snapshot.val()
-    console.log(phvalue)
+    document.getElementById("root").innerHTML = (phvalue)
 });
