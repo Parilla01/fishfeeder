@@ -28,9 +28,7 @@
 
         <div class="components" id="1">
 
-            <div class="phvalue">
-            <p id="root"></p>
-            </div>
+            <div class="phvalue" id="ph"></div>
 
             <div class="clock">
                 <div class="hand hours"></div>
@@ -82,7 +80,7 @@
         var phRef = firebase.database().ref('phvalue');
         phRef.on('value', function (snapshot) {
             phvalue = snapshot.val()
-            document.getElementById("root").innerHTML = (phvalue);
+            document.getElementById("ph").innerHTML = (phvalue);
         });
     </script>
 </body>
