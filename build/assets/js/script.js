@@ -1,3 +1,7 @@
+/*element for sensor reading*/
+const phElement = document.getElementById("ph");
+
+
 /*  clock */
 const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
@@ -45,6 +49,15 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+/*Database Paths*/
+var dbPathPh = 'sensor';
+/*database references*/
+var dbRefPh = firebase.database().ref().child(dbPathPh);
+/*Update page with new readings*/
+dbRefPh.on('value', snap => {
+    phElement.innerText = snap.val().toFixed(2);
+});
 
 var countRef = firebase.database().ref('count');
 countRef.on('value', function(snapshot) {
