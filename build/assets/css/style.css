@@ -80,19 +80,39 @@ html {
         margin-bottom: 5%;
         margin-left: 31.3%;
     }
-    .phmeter {
+    .container3 {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        width: 10rem;
+        height: 6rem;
+        justify-self: center;
+        box-shadow: 0.3rem 0.3rem 0.6rem var(--quixoticPlum), -0.2rem -0.2rem 0.5rem var(--quixoticPlum);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .phtitle {
+        grid-column: 1/3;
+        grid-row: 5/6;
         justify-self: center;
         display: flex;
+        justify-content: center;
         align-items: center;
-        align-content: center;
-        align-self: center;
-        border-radius: 3rem;
-        box-shadow: 0.8rem 0.8rem 1.4rem var(--quixoticPlum), -0.2rem -0.2rem 1.8rem var(--quixoticPlum);
-        padding: 1rem;
-        font-size: 20px;
-        margin-left: 105%;
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
+    }
 
-        
+    .phmeter {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
     }
     /*  BUTTONS  */
     .btn {
@@ -333,17 +353,40 @@ html {
         margin-bottom: 5%;
     }
 
-    .phmeter {
-        
+    .container3 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        width: 10rem;
+        height: 6rem;
+        justify-content: center;
+        justify-self: center;
+        box-shadow: 0.3rem 0.3rem 0.6rem var(--quixoticPlum), -0.2rem -0.2rem 0.5rem var(--quixoticPlum);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .phtitle {
+        grid-column: 1/3;
+        grid-row: 5/6;
         justify-self: center;
         display: flex;
+        justify-content: center;
         align-items: center;
-        align-content: center;
-        align-self: center;
-        border-radius: 3rem;
-        box-shadow: 0.8rem 0.8rem 1.4rem var(--quixoticPlum), -0.2rem -0.2rem 1.8rem var(--quixoticPlum);
-        padding: 3rem;
-        font-size: 15px;
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .phmeter {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
     }
     /*  BUTTONS  */
     .btn {
