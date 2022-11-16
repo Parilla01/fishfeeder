@@ -1,12 +1,6 @@
-/* -- DO NOT REMOVE --
- * jQuery MDTimePicker v1.0.2 plugin
+/* jQuery MDTimePicker v1.0.2 plugin
  * https://github.com/dmuy/MDTimePicker
- * 
- * Author: Dionlee Uy
- * Email: dionleeuy@gmail.com
- *
  * @requires jQuery
- * -- DO NOT REMOVE -- 
  */
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
