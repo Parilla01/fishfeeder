@@ -1,5 +1,3 @@
-/*element for sensor reading*/
-const phElement = document.getElementById("ph");
 
 
 /*  clock */
@@ -50,17 +48,32 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+/*element for sensor reading*/
+var phElement = document.getElementById("ph");
+var acidElement = document.getElementById("acid");
+
 /*Database Paths*/
 var dbPathPh = 'sensor';
+var dbPathAcid = 'result';
 /*database references*/
 var dbRefPh = firebase.database().ref().child(dbPathPh);
+var dbRefAcid = firebase.database().ref().child(dbPathAcid);
+
+
 /*Update page with new readings*/
 dbRefPh.on('value', snap => {
     phElement.innerText = snap.val().toFixed(2);
 });
+dbRefAcid.on('value', function (snap) {
+    document.getElementById("acid").innerHTML =
+        snap.val();
+});
+
+
+
 
 var countRef = firebase.database().ref('count');
-countRef.on('value', function(snapshot) {
+countRef.on('value', function (snapshot) {
     count = snapshot.val()
     console.log(count)
 });
@@ -71,12 +84,12 @@ function feednow() {
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#timepicker').mdtimepicker(); //Initializes the time picker
     addDiv();
 });
 
-$('#timepicker').mdtimepicker().on('timechanged', function(e) {
+$('#timepicker').mdtimepicker().on('timechanged', function (e) {
     console.log(e.time)
     addStore(count, e);
     count = count + 1
@@ -114,14 +127,14 @@ function removeDiv(id) {
 
 function addDiv() {
     var divRef = firebase.database().ref('timers');
-    divRef.on('value', function(snapshot) {
+    divRef.on('value', function (snapshot) {
         var obj = snapshot.val()
         var i = 0;
         $('#wrapper').html('')
         while (i <= count) {
             var propertyValues = Object.entries(obj);
             let ts = propertyValues[i][1]['time']
-                //var timeString = "12:04";
+            //var timeString = "12:04";
             var H = +ts.substr(0, 2);
             var h = (H % 12) || 12;
             h = (h < 10) ? ("0" + h) : h; // leading 0 at the left for 1 digit hours
